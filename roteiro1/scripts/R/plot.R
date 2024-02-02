@@ -3,7 +3,7 @@
 
 library('ggplot2')
 
-args <- commandArgs(trailingOnly=TRUE)
+args <- commandArgs()
 
 data = read.table(args[1], header = T)
-ggplot(data, aes(x = sample, y = time, coour = alg)) + geom_line()
+ggplot(data, aes(x = `sample`, y = time, coour = alg)) + geom_line()
